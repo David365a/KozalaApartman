@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt | Apartman Kozala</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container top">
+    <div class="brand">
+      <div class="logo">
+        <img src="img/logo.svg" alt="Logo Apartman Kozala" width="70">
+      </div>
+      <div class="brand-title">
+        <strong>Apartman Kozala</strong>
+        <span>Kontakt</span>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Navigacija">
+      <a href="index.html">Naslovnica</a>
+      <a href="smjestaj.html">Smještaj</a>
+      <a class="active" href="kontakt.html">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <section class="section">
+      <h1 style="margin:0 0 10px 0;">Kontakt</h1>
+
+      <p>
+        Email: <a href="mailto:info@apartman-kozala.hr">info@apartman-kozala.hr</a><br>
+        Telefon: <a href="tel:+385000000000">+385 00 000 0000</a>
+      </p>
+
+      <form action="#" method="post">
+        <div>
+          <label for="ime">Ime i prezime</label>
+          <input id="ime" name="ime" type="text" required>
+        </div>
+
+        <div>
+          <label for="mail">Email</label>
+          <input id="mail" name="mail" type="email" required>
+        </div>
+
+        <div>
+          <label for="poruka">Poruka</label>
+          <textarea id="poruka" name="poruka" placeholder="Termin, broj osoba, pitanja..."></textarea>
+        </div>
+
+        <div>
+          <button class="btn" type="submit">Pošalji (demo)</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="section">
+      <h2>Lokacija – Kozala (Rijeka)</h2>
+
+      <iframe
+        class="map"
+        src="https://www.google.com/maps?q=Kozala,+Rijeka,+Croatia&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Mapa Kozala, Rijeka">
+      </iframe>
+
+      <p style="margin-top:10px;">
+        Otvori u Google Maps:
+        <a href="https://www.google.com/maps?q=Kozala,+Rijeka,+Croatia" target="_blank" rel="noopener">Kozala (Rijeka)</a>
+      </p>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Apartman Kozala
+  </div>
+</footer>
+
+</body>
+</html>
