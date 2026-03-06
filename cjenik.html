@@ -4,53 +4,54 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Apartman Kozala | Cjenik</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="padding">
 
-<a class="skip-link" href="#content">Preskoči na sadržaj</a>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-3" href="index.html">
+        <img src="img/logo.svg" alt="Logo Apartman Kozala" width="64" height="64">
+        <span class="brand-text">
+          <strong class="d-block">Apartman Kozala</strong>
+          <small>privatni smještaj · Rijeka</small>
+        </span>
+      </a>
 
-<header class="site-header">
-  <div class="container top">
-    <a class="brand" href="index.html" aria-label="Apartman Kozala - Naslovnica">
-      <div class="logo">
-        <img src="img/logo.svg" alt="Logo Apartman Kozala" width="70" height="70">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Otvori navigaciju">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Naslovnica</a></li>
+          <li class="nav-item"><a class="nav-link" href="smjestaj.html">Smještaj</a></li>
+          <li class="nav-item"><a class="nav-link" href="galerija.html">Galerija</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="cjenik.html">Cjenik</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+        </ul>
       </div>
-      <div class="brand-title">
-        <strong>Apartman Kozala</strong>
-        <span>privatni smještaj · Rijeka</span>
-      </div>
-    </a>
-
-    <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false">
-      <span class="sr-only">Otvori navigaciju</span>
-      <span class="hamburger" aria-hidden="true"></span>
-    </button>
-
-    <nav id="primary-nav" class="nav" aria-label="Navigacija">
-      <a href="index.html">Naslovnica</a>
-      <a href="smjestaj.html">Smještaj</a>
-      <a href="galerija.html">Galerija</a>
-      <a class="active" href="cjenik.html">Cjenik</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </header>
 
-<main id="content" class="site-main">
+<main class="site-main py-5">
   <div class="container">
-
-    <section class="section">
-      <div class="section-head">
+    <div class="section-box">
+      <div class="section-title">
         <h1>Cjenik</h1>
-        <p class="muted">
-          Cijene su informativne. Konačna cijena ovisi o datumu, broju noćenja i broju osoba.
+        <p class="text-muted mb-0">
+          Informativne cijene smještaja. Točan izračun ovisi o terminu, broju osoba i duljini boravka.
         </p>
       </div>
 
-      <div class="table-wrap">
-        <table class="table" aria-label="Detaljni cjenik">
-          <thead>
+      <div class="table-responsive mt-3">
+        <table class="table table-bordered align-middle">
+          <thead class="table-light">
             <tr>
               <th>Period</th>
               <th>Noćenje (2 osobe)</th>
@@ -81,59 +82,49 @@
         </table>
       </div>
 
-      <div class="grid-2" style="margin-top:14px;">
-        <article class="card">
-          <h2>Uključeno u cijenu</h2>
-          <ul class="list">
-            <li>Wi-Fi</li>
-            <li>Posteljina i ručnici</li>
-            <li>Osnovna kuhinjska oprema</li>
-            <li>Klima (prema dogovoru)</li>
-          </ul>
-        </article>
+      <div class="row g-4 mt-1">
+        <div class="col-md-6">
+          <div class="info-card h-100">
+            <h2>Uključeno u cijenu</h2>
+            <ul>
+              <li>Wi-Fi internet</li>
+              <li>Posteljina i ručnici</li>
+              <li>Osnovna kuhinjska oprema</li>
+              <li>Korištenje apartmana prema dogovoru</li>
+            </ul>
+          </div>
+        </div>
 
-        <article class="card">
-          <h2>Uvjeti</h2>
-          <ul class="list">
-            <li>Dolazak/odlazak po dogovoru</li>
-            <li>Kućni ljubimci: dopušteni</li>
-            <li>Pušenje: nije dopušteno</li>
-            <li>Polog/akontacija: po dogovoru</li>
-          </ul>
-        </article>
+        <div class="col-md-6">
+          <div class="info-card h-100">
+            <h2>Napomene</h2>
+            <ul>
+              <li>Cijene su informativne</li>
+              <li>Rezervacija po dogovoru</li>
+              <li>Moguća prilagodba za duži boravak</li>
+              <li>Točna cijena potvrđuje se upitom</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <div class="notice">
-        <p class="muted" style="margin:0;">
-          Pošalji upit s datumima i brojem osoba: <a href="kontakt.html">Kontakt</a>.
-        </p>
-      </div>
-    </section>
-
+      <a href="kontakt.html" class="btn btn-primary mt-3">Pošalji upit</a>
+    </div>
   </div>
 </main>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <p>© 2026 Apartman Kozala</p>
-    <p class="muted">
-      <a href="kontakt.html">Kontakt</a> ·
-      <a href="galerija.html">Galerija</a> ·
+<footer class="site-footer py-4 border-top">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+    <p class="mb-0">© 2026 Apartman Kozala</p>
+    <div class="footer-links">
+      <a href="smjestaj.html">Smještaj</a>
+      <a href="galerija.html">Galerija</a>
       <a href="cjenik.html">Cjenik</a>
-    </p>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
   </div>
 </footer>
 
-<script>
-  const btn = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('#primary-nav');
-
-  btn.addEventListener('click', () => {
-    const open = btn.getAttribute('aria-expanded') === 'true';
-    btn.setAttribute('aria-expanded', String(!open));
-    nav.classList.toggle('open', !open);
-  });
-</script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
