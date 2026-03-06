@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apartman Kozala | Cjenik</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#content">Preskoči na sadržaj</a>
+
+<header class="site-header">
+  <div class="container top">
+    <a class="brand" href="index.html" aria-label="Apartman Kozala - Naslovnica">
+      <div class="logo">
+        <img src="img/logo.svg" alt="Logo Apartman Kozala" width="70" height="70">
+      </div>
+      <div class="brand-title">
+        <strong>Apartman Kozala</strong>
+        <span>privatni smještaj · Rijeka</span>
+      </div>
+    </a>
+
+    <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false">
+      <span class="sr-only">Otvori navigaciju</span>
+      <span class="hamburger" aria-hidden="true"></span>
+    </button>
+
+    <nav id="primary-nav" class="nav" aria-label="Navigacija">
+      <a href="index.html">Naslovnica</a>
+      <a href="smjestaj.html">Smještaj</a>
+      <a href="galerija.html">Galerija</a>
+      <a class="active" href="cjenik.html">Cjenik</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="content" class="site-main">
+  <div class="container">
+
+    <section class="section">
+      <div class="section-head">
+        <h1>Cjenik</h1>
+        <p class="muted">
+          Cijene su informativne. Konačna cijena ovisi o datumu, broju noćenja i broju osoba.
+        </p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="table" aria-label="Detaljni cjenik">
+          <thead>
+            <tr>
+              <th>Period</th>
+              <th>Noćenje (2 osobe)</th>
+              <th>Dodatna osoba</th>
+              <th>Minimalno noćenja</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Predsezona</td>
+              <td>60 €</td>
+              <td>10 €</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Sezona</td>
+              <td>90 €</td>
+              <td>15 €</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Postsezona</td>
+              <td>65 €</td>
+              <td>10 €</td>
+              <td>2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid-2" style="margin-top:14px;">
+        <article class="card">
+          <h2>Uključeno u cijenu</h2>
+          <ul class="list">
+            <li>Wi-Fi</li>
+            <li>Posteljina i ručnici</li>
+            <li>Osnovna kuhinjska oprema</li>
+            <li>Klima (prema dogovoru)</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Uvjeti</h2>
+          <ul class="list">
+            <li>Dolazak/odlazak po dogovoru</li>
+            <li>Kućni ljubimci: dopušteni</li>
+            <li>Pušenje: nije dopušteno</li>
+            <li>Polog/akontacija: po dogovoru</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="notice">
+        <p class="muted" style="margin:0;">
+          Pošalji upit s datumima i brojem osoba: <a href="kontakt.html">Kontakt</a>.
+        </p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2026 Apartman Kozala</p>
+    <p class="muted">
+      <a href="kontakt.html">Kontakt</a> ·
+      <a href="galerija.html">Galerija</a> ·
+      <a href="cjenik.html">Cjenik</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  const btn = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('#primary-nav');
+
+  btn.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    nav.classList.toggle('open', !open);
+  });
+</script>
+
+</body>
+</html>

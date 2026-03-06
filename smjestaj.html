@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apartman Kozala | Smještaj</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#content">Preskoči na sadržaj</a>
+
+<header class="site-header">
+  <div class="container top">
+    <a class="brand" href="index.html" aria-label="Apartman Kozala - Naslovnica">
+      <div class="logo">
+        <img src="img/logo.svg" alt="Logo Apartman Kozala" width="70" height="70">
+      </div>
+      <div class="brand-title">
+        <strong>Apartman Kozala</strong>
+        <span>privatni smještaj · Rijeka</span>
+      </div>
+    </a>
+
+    <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false">
+      <span class="sr-only">Otvori navigaciju</span>
+      <span class="hamburger" aria-hidden="true"></span>
+    </button>
+
+    <nav id="primary-nav" class="nav" aria-label="Navigacija">
+      <a href="index.html">Naslovnica</a>
+      <a class="active" href="smjestaj.html">Smještaj</a>
+      <a href="galerija.html">Galerija</a>
+      <a href="cjenik.html">Cjenik</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="content" class="site-main">
+  <div class="container">
+
+    <section class="section">
+      <div class="section-head">
+        <h1>Smještaj</h1>
+        <p class="muted">
+          Namijenjeno za 2–4 osobe. 1 spavaća soba (bračni krevet), dnevni boravak s kaučem na razvlačenje,
+          opremljena kuhinja, kupaonica i balkon.
+        </p>
+      </div>
+
+      <div class="grid-2">
+        <article class="card">
+          <h2>Oprema</h2>
+          <ul class="list">
+            <li>Wi-Fi</li>
+            <li>Klima</li>
+            <li>Kuhinja: hladnjak, ploča za kuhanje, osnovni pribor</li>
+            <li>Kupaonica: tuš, ručnici, sapun</li>
+            <li>TV (opcionalno)</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Pravila</h2>
+          <ul class="list">
+            <li>Check-in: po dogovoru</li>
+            <li>Check-out: po dogovoru</li>
+            <li>Pušenje: ne</li>
+            <li>Kućni ljubimci: da</li>
+            <li>Poštivanje kućnog reda i mira</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="notice">
+        <p class="muted" style="margin:0;">
+          Zanimaju te datumi? Pošalji upit preko <a href="kontakt.html">Kontakt</a> stranice.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Pogled s balkona</h2>
+      <p class="muted">
+        Balkon je idealan za jutarnju kavu i večernje opuštanje uz pogled na grad i okolicu.
+      </p>
+      <img class="media" src="img/pogled.PNG" alt="Pogled s balkona">
+    </section>
+
+    <section class="section">
+      <h2>Fotografije</h2>
+      <p class="muted">Kratki pregled prostora (više na stranici Galerija).</p>
+      <div class="gallery" aria-label="Galerija fotografija">
+        <img src="img/apartman-1.jpg" alt="Apartman - fotografija 1">
+        <img src="img/apartman-2.jpg" alt="Apartman - fotografija 2">
+        <img src="img/apartman-3.jpg" alt="Apartman - fotografija 3">
+        <img src="img/apartman-4.jpg" alt="Apartman - fotografija 4">
+      </div>
+      <div class="buttons" style="margin-top:12px;">
+        <a class="btn" href="galerija.html">Otvori punu galeriju</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Najčešća pitanja</h2>
+      <div class="faq">
+        <details>
+          <summary>Koliko osoba može doći?</summary>
+          <p>2–4 osobe (2 osnovno + 2 na kauču na razvlačenje).</p>
+        </details>
+        <details>
+          <summary>Je li parking dostupan?</summary>
+          <p>Da (ovisno o raspoloživosti u zoni/ulici).</p>
+        </details>
+        <details>
+          <summary>Kako se rezervira?</summary>
+          <p>Pošalji poruku preko <a href="kontakt.html">Kontakt</a> stranice i dogovorimo termin.</p>
+        </details>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2026 Apartman Kozala</p>
+    <p class="muted">
+      <a href="kontakt.html">Kontakt</a> ·
+      <a href="galerija.html">Galerija</a> ·
+      <a href="cjenik.html">Cjenik</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  const btn = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('#primary-nav');
+
+  btn.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    nav.classList.toggle('open', !open);
+  });
+</script>
+
+</body>
+</html>
