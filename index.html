@@ -3,122 +3,175 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Apartman Kozala</title>
+  <title>Apartman Kozala | Naslovnica</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
+<a class="skip-link" href="#content">Preskoči na sadržaj</a>
+
+<header class="site-header">
   <div class="container top">
-    <div class="brand">
+    <a class="brand" href="index.html" aria-label="Apartman Kozala - Naslovnica">
       <div class="logo">
-        <img src="img/logo.svg" alt="Logo Apartman Kozala" width="70">
+        <img src="img/logo.svg" alt="Logo Apartman Kozala" width="70" height="70">
       </div>
       <div class="brand-title">
         <strong>Apartman Kozala</strong>
         <span>privatni smještaj · Rijeka</span>
       </div>
-    </div>
+    </a>
 
-    <nav class="nav" aria-label="Navigacija">
+    <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false">
+      <span class="sr-only">Otvori navigaciju</span>
+      <span class="hamburger" aria-hidden="true"></span>
+    </button>
+
+    <nav id="primary-nav" class="nav" aria-label="Navigacija">
       <a class="active" href="index.html">Naslovnica</a>
       <a href="smjestaj.html">Smještaj</a>
+      <a href="galerija.html">Galerija</a>
+      <a href="cjenik.html">Cjenik</a>
       <a href="kontakt.html">Kontakt</a>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="content" class="site-main">
   <div class="container">
 
     <section class="hero">
-      <h1>Dobrodošli u Apartman Kozala</h1>
-      <p class="muted">
-        Uredan i dobro opremljen apartman za 2–4 osobe. Blizina centra Rijeke, jednostavan pristup i ugodan boravak.
-      </p>
+      <div class="hero-grid">
+        <div class="hero-text">
+          <p class="badge">★★★ Privatni smještaj</p>
+          <h1>Dobrodošli u Apartman Kozala</h1>
+          <p class="muted">
+            Uredan i dobro opremljen apartman za 2–4 osobe. Mirna lokacija, brz pristup centru Rijeke i ugodan boravak.
+          </p>
 
-      <p>
-        ★★★
-        <br>
-        Za više informacija o Rijeci: <a href="https://visitrijeka.hr/" target="_blank" rel="noopener">Turističke informacije Rijeka</a>
-      </p>
+          <div class="buttons">
+            <a class="btn primary" href="smjestaj.html">Pogledaj smještaj</a>
+            <a class="btn" href="kontakt.html">Pošalji upit</a>
+          </div>
 
-      <div class="buttons">
-        <a class="btn" href="smjestaj.html">Pogledaj smještaj</a>
-        <a class="btn" href="kontakt.html">Pošalji upit</a>
+          <p class="fineprint">
+            Turističke info Rijeka:
+            <a href="https://visitrijeka.hr/" target="_blank" rel="noopener">visitrijeka.hr</a>
+          </p>
+        </div>
+
+        <div class="hero-media">
+          <img src="img/apartman.jpg" alt="Glavna slika apartmana">
+        </div>
       </div>
-
-      <img src="img/apartman.jpg" alt="Glavna slika apartmana">
     </section>
 
     <section class="section">
       <h2>Zašto odabrati nas</h2>
-      <div class="two">
-        <div class="col">
+      <div class="cards">
+        <article class="card">
+          <h3>Lokacija</h3>
+          <p class="muted">Kozala je mirna četvrt s dobrim pristupom centru i glavnim prometnicama.</p>
           <ul class="list">
-            <li>Jednostavna komunikacija i brzi dogovor</li>
-            <li>Čisto i uredno, prilagođeno kućnim ljubimcima</li>
-            <li>Prikladno za parove i manje obitelji</li>
+            <li>Brz dolazak do centra</li>
+            <li>Mirnije okruženje</li>
+            <li>Prikladno za duži boravak</li>
           </ul>
-        </div>
-        <div class="col">
+        </article>
+
+        <article class="card">
+          <h3>Udobnost</h3>
+          <p class="muted">Sve osnovno za ugodan boravak, bez komplikacija.</p>
           <ul class="list">
-            <li>Wi-Fi, klima</li>
+            <li>Wi-Fi i klima</li>
+            <li>Opremljena kuhinja</li>
+            <li>Kauč na razvlačenje</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Fleksibilnost</h3>
+          <p class="muted">Jednostavna komunikacija i dogovor.</p>
+          <ul class="list">
             <li>Check-in/out po dogovoru</li>
-            <li>Mirna lokacija (Kozala)</li>
+            <li>Kućni ljubimci dobrodošli</li>
+            <li>Brz odgovor na upit</li>
           </ul>
-        </div>
+        </article>
       </div>
     </section>
 
     <section class="section">
-      <h2>Video</h2>
-      <video class="video" controls preload="metadata">
+      <h2>Promo video</h2>
+      <p class="muted">Kratak pregled prostora i ugođaja.</p>
+      <video class="video" controls preload="metadata" poster="img/video-poster.jpg">
         <source src="img/promo.mp4" type="video/mp4">
         Tvoj preglednik ne podržava video.
       </video>
     </section>
 
     <section class="section">
-      <h2>Pregled cijena</h2>
+      <h2>Brzi cjenovni pregled</h2>
+      <div class="table-wrap">
+        <table class="table" aria-label="Cjenik">
+          <thead>
+            <tr>
+              <th>Period</th>
+              <th>Noćenje (2 osobe)</th>
+              <th>Dodatna osoba</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Predsezona</td>
+              <td>60 €</td>
+              <td>10 €</td>
+            </tr>
+            <tr>
+              <td>Sezona</td>
+              <td>90 €</td>
+              <td>15 €</td>
+            </tr>
+            <tr>
+              <td>Postsezona</td>
+              <td>65 €</td>
+              <td>10 €</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-      <table class="table" aria-label="Cjenik">
-        <tr>
-          <th>Period</th>
-          <th>Noćenje (2 osobe)</th>
-          <th>Dodatna osoba</th>
-        </tr>
-        <tr>
-          <td>Predsezona</td>
-          <td>60 €</td>
-          <td>10 €</td>
-        </tr>
-        <tr>
-          <td>Sezona</td>
-          <td>90 €</td>
-          <td>15 €</td>
-        </tr>
-        <tr>
-          <td>Postsezona</td>
-          <td>65 €</td>
-          <td>10 €</td>
-        </tr>
-      </table>
-
-      <p style="margin-top:10px;">
-        Za dostupnost i točan izračun pošalji upit na <a href="kontakt.html">Kontakt</a>.
-      </p>
+      <div class="notice">
+        <p class="muted" style="margin:0;">
+          Za puni cjenik i uvjete idi na <a href="cjenik.html">Cjenik</a> ili pošalji upit preko <a href="kontakt.html">Kontakta</a>.
+        </p>
+      </div>
     </section>
 
   </div>
 </main>
 
-<footer>
-  <div class="container">
-    © 2026 Apartman Kozala
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2026 Apartman Kozala</p>
+    <p class="muted">
+      <a href="kontakt.html">Kontakt</a> ·
+      <a href="galerija.html">Galerija</a> ·
+      <a href="cjenik.html">Cjenik</a>
+    </p>
   </div>
 </footer>
 
-</body>
+<script>
+  const btn = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('#primary-nav');
 
+  btn.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    nav.classList.toggle('open', !open);
+  });
+</script>
+
+</body>
 </html>
